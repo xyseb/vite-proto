@@ -6,7 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "npm run build & concurrently --kill-others --names \"Rome,Vite\" --prefix \"[{name}]\" --prefix-colors \"bgGrey.bold,bgYellow.bold\" --max-processes=\"75%\" \"npm run _rome:watch\" \"npm run preview\"",
+    "_rome:watch": "chokidar \"./build/*.*\" -c \"npm run _rome:lint\"",
+    "_rome:lint": "rome check \"./src\"",
+    "_stylelint:watchsass": "chokidar \"./src/**/*.scss\" -c \"npm run _stylelint:sass\"",
+    "_stylelint:watchcss": "chokidar \"./public/**/*.css\"  -c \"npm run _stylelint:css\"",
+    "_stylelint:sass": "stylelint --config \"./.stylelintrc.sass.json\" \"./src/**/*.scss\"",
+    "_stylelint:css": "stylelint \"./public/*.css\"",
+    "format": "rome format \"./dist\""
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -16,7 +24,16 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
+    "chokidar": "^3.5.3",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^8.0.1",
+    "eslint-plugin-compat": "^4.1.4",
+    "rome": "^12.0.0",
     "sass": "^1.58.3",
+    "stylelint": "^15.4.0",
+    "stylelint-config-sass-guidelines": "^10.0.0",
+    "stylelint-config-standard": "^32.0.0",
+    "stylelint-no-unsupported-browser-features": "^6.1.0",
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
   }
