@@ -1,0 +1,33 @@
+#
+# Liste des navigateurs que l'on supporte
+#
+# Utilisé par Babel-env, Autoprefixer, etc...
+#
+# Si ce fichier est modifié, faire `npm run browserslist` pour vérifier la liste des navigateurs
+#
+# cf. https://github.com/browserslist/browserslist
+#
+
+# Sélectionne les navigateurs étant utilisés
+> 0.5%
+
+# Mobile 
+# Ajoute quelques navigateurs supplémentaires sur smartphone uniquement s'ils sont "un peu" utilisés
+#last 99 iOS versions and > 0.1%
+#last 99 Samsung versions and > 0.1%
+#last 99 FirefoxAndroid versions and > 0.1%
+#last 99 ChromeAndroid versions and > 0.1%
+#last 99 OperaMini versions and > 0.1%
+
+# Supprime les navigateurs NON mort (IE < 10, etc...) ou trop vieux (Safari 5.1)
+not dead
+not safari < 10
+
+# Supprime IE+Edge+ExplorerMobile
+# On ne veut *pas* être compatible avec IE (desktop-only & mort) ou Edge (desktop-only & mort à court terme) ou ExplorerMobile (mort)
+not ExplorerMobile <= 99
+not ie <= 11
+not edge <= 99
+
+# Ajoute Firefox ESR (linux)
+Firefox ESR
