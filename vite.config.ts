@@ -9,10 +9,10 @@ export default defineConfig({
     checker({
       typescript: true,
       eslint: {
-        lintCommand: 'eslint "./src/**/*.{ts,tsx,js,mjs,cjs,jsx}"',
+        lintCommand: "eslint ./src/**/*",
       },
       stylelint: {
-        lintCommand: 'stylelint ./src/**/*.{scss}',
+        lintCommand: "stylelint ./src/**/*.{scss,css}",
       },
     })
   ],

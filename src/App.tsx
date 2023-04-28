@@ -4,7 +4,7 @@ import './App.scss'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const unused = "gaz"
   return (
     <div className="App">
       <div>
