@@ -4,7 +4,7 @@ import './App.scss'
 
 function App() {
   const [count, setCount] = useState(0)
-  const unused = "gaz"
+  const unused = "detected by eslint as unused variable"
   return (
     <div className="App">
       <div>
