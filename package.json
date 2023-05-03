@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "optim": "vite optimize --mode development",
     "dev:debug": "vite --debug",
-    "api": "",
+    "api": "cd.. && dotnet watch run -warn:0 -v quiet environment=Development kestrelonly=true",
     "start": "npm run dev && npm run api"
   },
   "dependencies": {
@@ -40,6 +40,7 @@
     "stylelint-order": "^6.0.3",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
-    "vite-plugin-checker": "^0.5.6"
+    "vite-plugin-checker": "^0.5.6",
+    "vite-plugin-pwa": "^0.14.7"
   }
 }
