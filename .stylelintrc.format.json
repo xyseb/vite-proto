@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "stylelint-config-hudochenkov/order"
+  ],
+  "plugins": [
+  ],
+  "rules": {
+  }
+}

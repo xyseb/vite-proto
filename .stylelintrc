@@ -2,7 +2,7 @@
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-standard-scss",
-    "stylelint-config-rational-order"
+    "stylelint-config-hudochenkov/order"
   ],
   "plugins": [
     "stylelint-no-unsupported-browser-features"
