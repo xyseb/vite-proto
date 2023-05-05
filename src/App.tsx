@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.scss'
+import Hi from './Hi'
 
 function App() {
   const [count, setCount] = useState(0)
   const unused = "detected by eslint as unused variable"
   return (
     <div className="App">
+      <Hi />
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
