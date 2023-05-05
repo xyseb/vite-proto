@@ -1,9 +1,13 @@
-{
-    "env": {
-        "browser": true,
-        "es2021": true
+/*
+ * ESLINT Configuration file
+ */
+
+module.exports = {
+    env: {
+        browser: true,
+        es2021: true
     },
-    "extends": [
+    extends: [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:react/recommended",
@@ -14,19 +18,19 @@
         "plugin:react/jsx-runtime", //disalow 'import React' old needs (before react 17)
         "plugin:compat/recommended"
     ],
-    "overrides": [
+    overrides: [
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+    parser: "@typescript-eslint/parser",
+    parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module"
     },
-    "plugins": [
+    plugins: [
     ],
-    "rules": {
+    rules: {
     },
-    "settings": {
-        "polyfills": [
+    settings: {
+        polyfills: [
             "fetch",
             "Promise",
             "WebAssembly.compile",

@@ -1,13 +1,17 @@
-{
-  "extends": [
+/*
+ * STYLELINT Configuration file
+ */
+
+module.exports = {
+  extends: [
     "stylelint-config-standard",
     "stylelint-config-standard-scss",
     "stylelint-config-hudochenkov/order"
   ],
-  "plugins": [
+  plugins: [
     "stylelint-no-unsupported-browser-features"
   ],
-  "rules": {
+  rules: {
     "rule-empty-line-before": null,
     "plugin/no-unsupported-browser-features": [true, {
       "severity": "warning",

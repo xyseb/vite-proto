@@ -1,10 +1,14 @@
-{
-  "extends": [
+/*
+ * STYLELINT Configuration file
+ */
+
+module.exports = {
+  extends: [
     "stylelint-config-standard",
     "stylelint-config-standard-scss"
   ],
-  "plugins": ["stylelint-order"],
-	"rules": {
+  plugins: ["stylelint-order"],
+	rules: {
     "declaration-empty-line-before": null,
 		"order/order": [
 			[
