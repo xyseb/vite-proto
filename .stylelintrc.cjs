@@ -60,7 +60,7 @@ module.exports = {
     'stylistic/selector-list-comma-newline-before': 'never-multi-line',
     'stylistic/selector-list-comma-space-after': 'always-single-line',
     'stylistic/selector-list-comma-space-before': 'never-single-line',
-    'stylistic/unicode-bom': 'never',
+    'stylistic/unicode-bom': 'never', // TODO ensure is right
     'stylistic/value-list-comma-newline-after': 'never-multi-line',
     'stylistic/value-list-comma-newline-before': 'never-multi-line',
     'stylistic/value-list-comma-space-after': 'always',
